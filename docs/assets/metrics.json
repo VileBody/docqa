@@ -1,0 +1,52 @@
+{
+  "version": "readme-visuals-v1",
+  "source_commit": "38e138601016c196539f499ef953c40f27d72bd8",
+  "reader": {
+    "source": "docs/submission/evidence/SOL_READER_COMPARISON.json",
+    "labels": [
+      "Sosana / Sol",
+      "Sosana / Astra"
+    ],
+    "keys": [
+      "sol",
+      "astra"
+    ],
+    "median_generation_s": [
+      3.4321731039963197,
+      4.937332478999451
+    ],
+    "list_price_usage_usd": [
+      0.0621438,
+      0.308049
+    ],
+    "executions": [
+      40,
+      40
+    ],
+    "new_model_generations": [
+      38,
+      38
+    ],
+    "semantic_pass": [
+      40,
+      40
+    ],
+    "scope": "Historical authored reader control; includes planned repeats and two local empty-pack refusals per model. Not API latency or a public benchmark."
+  },
+  "contractnli": {
+    "source": "docs/PUBLIC_BENCHMARKS.md",
+    "labels": [
+      "Qwen",
+      "Sosana / Luna"
+    ],
+    "correct": [
+      199,
+      247
+    ],
+    "total": [
+      340,
+      340
+    ],
+    "scope": "Historical earlier profiles; classification, not generic QA; not Sol/P1."
+  }
+}
