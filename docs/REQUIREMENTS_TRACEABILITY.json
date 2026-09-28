@@ -1,0 +1,901 @@
+[
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "api.py; Linux API tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "FastAPI routes and request/response models",
+    "id": "T01",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "FastAPI routes and request/response models [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "core.py, tasks.py; Linux integration",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Queued upload and durable task identity",
+    "id": "T02",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Queued upload and durable task identity [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "test_stage2.py",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Unknown task 404, ready/failed states",
+    "id": "T03",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Unknown task 404, ready/failed states [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "test_stage2.py",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Catalog pending/failed/ready; idempotency",
+    "id": "T04",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Catalog pending/failed/ready; idempotency [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "store.py; integration and evidence tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "doc_id/snapshot/ready filtering and exact citation scope",
+    "id": "T05",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "doc_id/snapshot/ready filtering and exact citation scope [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "examples/acceptance/live_v1/HTTP_OUTPUTS.json, page100; acceptance/source_fidelity_v2/EVIDENCE.json",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "New cold upload of existing 100-logical-page TXT; real Celery indexing; exact page-100 answer. Small functional fixture, not throughput.",
+    "id": "T06",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "New cold upload of existing 100-logical-page TXT; real Celery indexing; exact page-100 answer. Small functional fixture, not throughput. [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "acceptance/source_fidelity_live_v2/REPORT.md; both ADJUDICATION.json files",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "FAIL"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "H03: source authentic, but the requested action/start are not established; false found/complete. Other 11 cases pass.",
+    "id": "T07",
+    "implementation": "docqa_rag/flow.py:Flow._validate_draft",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Historical Sol/P1 v1 HTTP: 12/12 semantic checks, H03 correctly not_found with nonempty pack; normal paraphrase and explicit equivalence preserved. V2 changes only retries; no new live quality score."
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "source_fidelity_live_v2, api_missing_insurance/nonempty_missing_amount",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "FAIL"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "H03: source authentic, but the requested action/start are not established; false found/complete. Other 11 cases pass.",
+    "id": "T08",
+    "implementation": "docqa_rag/types.py:StrictDraft",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Historical Sol/P1 v1: H03/H09/H11/H12 correct not_found, explicit prohibition and calculation retained. Strict states and authentic spans covered by public CPU tests; v2 transport does not reroll semantic results."
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "core.py, generation_request; source inspection",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "H11/H12 actual P1 model inputs equal, 14 messages, 6 fixed teaching pairs, no previous user history; two provider calls.",
+    "id": "T09",
+    "implementation": "docqa_rag/reader_control.py:request_parts",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "H11/H12 actual P1 model inputs equal, 14 messages, 6 fixed teaching pairs, no previous user history; two provider calls. [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "Linux 18-test suite",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Real Celery/Redis including worker SIGKILL",
+    "id": "T10",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Real Celery/Redis including worker SIGKILL [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "store.py; integration",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Shared generation collection and doc filter",
+    "id": "T11",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Shared generation collection and doc filter [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "registry.py; integration",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Qdrant document payload; Redis task state",
+    "id": "T12",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Qdrant document payload; Redis task state [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "store.py verify; integration",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Chunk payload and offsets validated on publication/restore",
+    "id": "T13",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Chunk payload and offsets validated on publication/restore [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "real Qdrant integration",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "doc_id/snapshot/ready payload indexes",
+    "id": "T14",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "doc_id/snapshot/ready payload indexes [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "store.py; real Qdrant integration",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "dense and bm25 in each point",
+    "id": "T15",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "dense and bm25 in each point [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "sparse.py; numerical/rebuild tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Frozen BM25 statistics and append vocabulary rebuild",
+    "id": "T16",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Frozen BM25 statistics and append vocabulary rebuild [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "store.py; replay and server tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "One primary native fusion request; diagnostic queries separate",
+    "id": "T17",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "One primary native fusion request; diagnostic queries separate [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "config.py; profile/wire tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Validated env fusion/input limits",
+    "id": "T18",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Validated env fusion/input limits [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "source_fidelity_live_v2/RESULTS.json and model traces",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "12 actual separately priced-in-GPU reranker calls; confirmed explicit-instruction-v2 worker, candidates and pack trace.",
+    "id": "T19",
+    "implementation": "docqa_rag/agent_loop/protocol.py:InstructionReranker",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "12 actual separately priced-in-GPU reranker calls; confirmed explicit-instruction-v2 worker, candidates and pack trace. [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "planning.py select_pack; tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Pack only from ranked authentic candidates; bounded top-k",
+    "id": "T20",
+    "implementation": "docqa_rag/selection.py:select_pack",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Pack only from ranked authentic candidates; bounded top-k [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "config.py, models.py; regression tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Env reranker model/revision/input/output limits wired",
+    "id": "T21",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Env reranker model/revision/input/output limits wired [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "new TRACE_SUMMARIES.json; historical v1 receipts",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Actual LangChain splitter/embeddings/chat; fresh cold ingestion and 12 Luna/P1 completions. SDK exact wire additionally checked through mock transport.",
+    "id": "T22",
+    "implementation": "docqa_rag/adapters.py:ChatAdapter.structured",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Historical Sol/P1 v1: 12 actual LangChain reader completions, 5 restored documents + 2 existing fixtures; full logical requests verified. V2 first-attempt messages/schema/parameters unchanged, tested locally."
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "types.py, api.py; tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Pydantic contracts and invalid citation/model rejection",
+    "id": "T23",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Pydantic contracts and invalid citation/model rejection [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "config.py; .env.example",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Profile defaults/env overrides, complete example config",
+    "id": "T24",
+    "implementation": "docqa_service/config.py:Settings",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Profile defaults/env overrides, complete example config [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "adapters.py, qdrant.py; tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Three transient model/read retries; explicit 5xx, no false refusal",
+    "id": "T25",
+    "implementation": "docqa_service/models.py:calls; docqa_rag/adapters.py:Calls.invoke; profiles/submission/sol_p1_v2.json",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "V2 actual Calls factory: at most 3 attempts total on classified transient transport/408/429/500/502/503/504 errors; 503 then success, permanent/invalid errors once, three failures stop, budget/deadline blocks another send. Each attempt retained in ledger/records. CPU MockTransport, not live fault-test."
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "store.py, core.py; tests",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Observed same-snapshot branch replay and separate query cost",
+    "id": "T26",
+    "implementation": "docqa_service/core.py:Service; docqa_rag/store.py:Index",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Observed same-snapshot branch replay and separate query cost [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "acceptance/source_fidelity_v2/EVIDENCE.json",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Allowlist cleanroom Docker build/install, pip check, 30 Linux tests, actual 4-question CPU HTTP and snapshot restore; same runtime image used for live.",
+    "id": "T27",
+    "implementation": "scripts/build_sol_release.py:build",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "V2 explicit allowlist ZIP with hashes/CRC and available-secret scan; 42/42 self-contained public tests pass on host, isolated release and clean Linux image with network disabled. Historical cleanrooms remain separate: Luna 30 tests; Sol v1 14 tests. No new paid acceptance."
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "README.md; this report",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Architecture, limits, production gaps documented",
+    "id": "T28",
+    "implementation": "README.md",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Architecture, limits, production gaps documented [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  },
+  {
+    "evidence": [
+      "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json",
+      "docs/submission/evidence/SOL_HTTP_SUMMARY.json",
+      "docs/submission/evidence/SUBMISSION_V2_CHANGES.json",
+      "docs/submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json",
+      "docs/submission/evidence/SUBMISSION_V2_VALIDATION.json"
+    ],
+    "evidence_type": "real_infrastructure_and_live_models_http_plus_labeled_CPU_doubles",
+    "historical_evidence": "source_fidelity_live_v2 HTTP_OUTPUTS.json",
+    "historical_luna_evidence": {
+      "evidence": [
+        "docs/submission/evidence/HISTORICAL_INFRASTRUCTURE.json"
+      ],
+      "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+      "scope": "Final Luna/P1 product; current CPU/Linux/live evidence, historical research separate",
+      "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d",
+      "status": "PASS"
+    },
+    "historical_test_references": "tests/test_stage2.py; tests/test_submission_luna.py; tests/test_finalization.py; tests/test_rag_stage1.py; tests/test_rag_stage1_1.py",
+    "historical_verification": "Actual exact identifier H01 and nonempty no-answer H11 published unedited in API_EXAMPLES; H03 failure also retained.",
+    "id": "T29",
+    "implementation": "scripts/submission_http.py:run",
+    "limitation": "Finite known/authored checks with agent review; v2 retry behavior tested locally, not against live faults. Historical benchmarks are not Sol scores.",
+    "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+    "scope": "submission-sol-p1-v2: new local retry/packaging checks; live quality and infrastructure evidence explicitly historical",
+    "source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+    "status": "PASS",
+    "tests": "tests/test_submission_retry.py; tests/test_submission_luna.py; tests/test_stronger_submission.py; tests/test_public_submission.py",
+    "verification": "Actual exact identifier H01 and nonempty no-answer H11 published unedited in API_EXAMPLES; H03 failure also retained. [Historical infrastructure evidence plus unchanged runtime; not a new live execution.]"
+  }
+]

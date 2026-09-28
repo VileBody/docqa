@@ -1,0 +1,87 @@
+{
+  "json_schema": {
+    "name": "SpanDraft",
+    "schema": {
+      "$defs": {
+        "SpanClaim": {
+          "additionalProperties": false,
+          "properties": {
+            "references": {
+              "items": {
+                "$ref": "#/$defs/SpanReference"
+              },
+              "minItems": 1,
+              "title": "References",
+              "type": "array"
+            },
+            "text": {
+              "title": "Text",
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "references"
+          ],
+          "title": "SpanClaim",
+          "type": "object"
+        },
+        "SpanReference": {
+          "additionalProperties": false,
+          "properties": {
+            "source_id": {
+              "title": "Source Id",
+              "type": "string"
+            },
+            "span_id": {
+              "title": "Span Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "source_id",
+            "span_id"
+          ],
+          "title": "SpanReference",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/SpanClaim"
+          },
+          "title": "Claims",
+          "type": "array"
+        },
+        "missing": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "ambiguous",
+            "contradictory",
+            "not_found"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "claims",
+        "missing"
+      ],
+      "type": "object"
+    },
+    "strict": true
+  },
+  "type": "json_schema"
+}

@@ -1,0 +1,15 @@
+{
+  "answerability_policy": "strict_answerability_v1",
+  "binding_sha256": "a26faccd9887272339609ce6fc6603c6d61290b152bd474490533f322d9f3642",
+  "critic_mode": "off",
+  "generation_cache": "disabled",
+  "generator": "openai",
+  "max_attempts": 3,
+  "origin": "Selected in stronger_reader_v1; unchanged P1 and retrieval. Sosana upstream unverified.",
+  "prices_path": "profiles/submission/sol_prices.json",
+  "prompt_config": "profiles/reader_control_v1/P1.json",
+  "query_policy": "raw",
+  "request_timeout_s": 180,
+  "retrieval_profile": "profiles/submission/sol_p1_runtime.json",
+  "version": "submission-sol-p1-v2"
+}

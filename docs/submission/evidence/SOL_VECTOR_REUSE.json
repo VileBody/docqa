@@ -1,0 +1,9 @@
+{
+  "all_existing_dense_vectors_byte_equal_as_JSON_values": true,
+  "existing_chunks": 116,
+  "existing_document_reembedding_calls": 0,
+  "new_chunks": 2,
+  "new_document_embedding_calls": 2,
+  "note": "BM25 rebuilt with added fixture vocabulary; retrieval policy unchanged.",
+  "query_embedding_calls": 12
+}

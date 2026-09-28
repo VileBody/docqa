@@ -1,0 +1,9 @@
+{
+  "examples_file": "profiles/reader_control_v1/teaching_examples.json",
+  "examples_sha256": "d8edc977cefe4ffe6e9519f2d69df1e28a6934ae4c65b1cf8045c03af01a88ca",
+  "prompt": "P1",
+  "public_policy": "strict_answerability_v1",
+  "system_file": "profiles/reader_control_v1/P1.system.txt",
+  "system_sha256": "9658a425b18ad1cb7a91fc578b8c8c47a2ca57d7390e31382c4f8e1fbf692f3d",
+  "version": "reader_answerability_candidate_v1"
+}

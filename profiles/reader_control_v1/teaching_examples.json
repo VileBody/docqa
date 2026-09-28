@@ -1,0 +1,208 @@
+[
+  {
+    "id": "teach_direct",
+    "purpose": "teaching_only_not_benchmark",
+    "input": {
+      "contract_version": "reader_answerability_candidate_v1",
+      "original_question": "Как долго хранится журнал доступа?",
+      "sources": [
+        {
+          "source_id": "S1",
+          "spans": [
+            {
+              "span_id": "L1",
+              "text": "Журнал доступа хранится 45 календарных дней после закрытия записи."
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "status": "complete",
+      "claims": [
+        {
+          "text": "Журнал доступа хранится 45 календарных дней после закрытия записи.",
+          "references": [
+            {
+              "source_id": "S1",
+              "span_id": "L1"
+            }
+          ]
+        }
+      ],
+      "missing": []
+    }
+  },
+  {
+    "id": "teach_related_not_answer",
+    "purpose": "teaching_only_not_benchmark",
+    "input": {
+      "contract_version": "reader_answerability_candidate_v1",
+      "original_question": "Каков размер возвратного обеспечения за датчик?",
+      "sources": [
+        {
+          "source_id": "S1",
+          "spans": [
+            {
+              "span_id": "L1",
+              "text": "Обслуживание датчика стоит 90 рублей в месяц."
+            },
+            {
+              "span_id": "L2",
+              "text": "Передача датчика оформляется отдельным актом."
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "status": "not_found",
+      "claims": [],
+      "missing": [
+        "размер возвратного обеспечения за датчик"
+      ]
+    }
+  },
+  {
+    "id": "teach_partial_composite",
+    "purpose": "teaching_only_not_benchmark",
+    "input": {
+      "contract_version": "reader_answerability_candidate_v1",
+      "original_question": "Каков объём хранилища и как долго действует пробный доступ?",
+      "sources": [
+        {
+          "source_id": "S1",
+          "spans": [
+            {
+              "span_id": "L1",
+              "text": "Объём хранилища составляет 80 ГБ."
+            },
+            {
+              "span_id": "L2",
+              "text": "Пробный доступ подключается по заявке."
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Объём хранилища составляет 80 ГБ.",
+          "references": [
+            {
+              "source_id": "S1",
+              "span_id": "L1"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "продолжительность пробного доступа"
+      ]
+    }
+  },
+  {
+    "id": "teach_different_target",
+    "purpose": "teaching_only_not_benchmark",
+    "input": {
+      "contract_version": "reader_answerability_candidate_v1",
+      "original_question": "Через сколько часов файл будет опубликован после проверки?",
+      "sources": [
+        {
+          "source_id": "S1",
+          "spans": [
+            {
+              "span_id": "L1",
+              "text": "Копирование файла начинается через 36 часов после проверки."
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "status": "not_found",
+      "claims": [],
+      "missing": [
+        "срок публикации файла после проверки"
+      ]
+    }
+  },
+  {
+    "id": "teach_explicit_equivalence",
+    "purpose": "teaching_only_not_benchmark",
+    "input": {
+      "contract_version": "reader_answerability_candidate_v1",
+      "original_question": "Через сколько часов после загрузки файл доступен в архиве?",
+      "sources": [
+        {
+          "source_id": "S1",
+          "spans": [
+            {
+              "span_id": "L1",
+              "text": "В этой системе момент загрузки файла считается моментом его приёма."
+            },
+            {
+              "span_id": "L2",
+              "text": "Файл доступен в архиве через 12 часов после приёма."
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "status": "complete",
+      "claims": [
+        {
+          "text": "Файл доступен в архиве через 12 часов после загрузки: в этом регламенте загрузка приравнена к приёму.",
+          "references": [
+            {
+              "source_id": "S1",
+              "span_id": "L1"
+            },
+            {
+              "source_id": "S1",
+              "span_id": "L2"
+            }
+          ]
+        }
+      ],
+      "missing": []
+    }
+  },
+  {
+    "id": "teach_simple_calculation",
+    "purpose": "teaching_only_not_benchmark",
+    "input": {
+      "contract_version": "reader_answerability_candidate_v1",
+      "original_question": "Сколько стоит аренда двух ячеек за одни сутки?",
+      "sources": [
+        {
+          "source_id": "S1",
+          "spans": [
+            {
+              "span_id": "L1",
+              "text": "Аренда одной ячейки стоит 45 рублей за сутки; стоимость нескольких ячеек складывается."
+            }
+          ]
+        }
+      ]
+    },
+    "output": {
+      "status": "complete",
+      "claims": [
+        {
+          "text": "Для двух ячеек на одни сутки: 45 × 2 = 90 рублей. Количество ячеек задано в вопросе.",
+          "references": [
+            {
+              "source_id": "S1",
+              "span_id": "L1"
+            }
+          ]
+        }
+      ],
+      "missing": []
+    }
+  }
+]

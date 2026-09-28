@@ -1,0 +1,12 @@
+{
+  "execution": "final_luna_p1_http_smoke_v1",
+  "full_original_copy": "HISTORICAL_LUNA_SYNTHETIC_HTTP_OUTPUTS.json (research checkout only; omitted from new public release)",
+  "historical": true,
+  "historical_result": "11/12; H03 false found retained",
+  "max_attempts": 3,
+  "model": "Sosana gpt-6-luna",
+  "original_file_sha256": "440211aeb5c7a04984b6f3447b9f6e62ce436af311bdf06daf86c69a6caddca0",
+  "profile": "submission-luna-p1-v1",
+  "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+  "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d"
+}

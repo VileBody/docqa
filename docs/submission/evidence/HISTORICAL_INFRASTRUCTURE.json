@@ -1,0 +1,73 @@
+{
+  "luna_cleanroom_30_tests": "Historical Linux cleanroom including prefork/kill/redelivery/atomic publication; full log stays in research checkout.",
+  "luna_cpu_http": {
+    "cleanroom_root": "exports/final_acceptance/luna_p1_cpu_candidate_v2",
+    "http": {
+      "documents": 3,
+      "evidence_type": "real_infrastructure_model_doubles",
+      "inputs_sha256": "43ec7e26725fb95a530e4f373787fbdec1af44db0c3364a4f94c6a3439d276c3",
+      "questions": 4,
+      "semantic_review": "NOT_RUN",
+      "statuses": [
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    "models": "explicit_doubles",
+    "paid_calls": 0,
+    "real_celery": true,
+    "real_http": true,
+    "real_qdrant": true,
+    "real_redis": true,
+    "restore_verified": true,
+    "semantic_acceptance": "NOT_RUN_MODEL_DOUBLES",
+    "status": "PASS"
+  },
+  "luna_http": {
+    "actual_provider_requests": 12,
+    "cold_documents": 5,
+    "empty_packs": 0,
+    "failures": [
+      "H03"
+    ],
+    "http_200": 12,
+    "independent_human_review": false,
+    "p1_wire_contract_verified": 12,
+    "profile_sha256": "e556cf1861774e6b487e4062f9082afb682a21a97a02b8f5dfe9242abca408ca",
+    "q2_full_input_identical": true,
+    "questions": 12,
+    "retained_previous_failure": true,
+    "reviewer_kind": "agent",
+    "scope": "fixed final product smoke",
+    "semantic_passed": 11,
+    "snapshot_restore_verified": true,
+    "source_sha256": "36404df7d21f847c0ceab9290cec1eb58348dd5ebb81435f67b303597eb6731d"
+  },
+  "original_sha256": {
+    "CLEANROOM.json": "7df32f638111c971985b1f3c49cf50febab3cefd2cccad3ad43a5d01c6f794f1",
+    "CPU_v2.xml": "713022d8886de95d6b3bffc7afa810a2234560558093294548259cd847fd5b19",
+    "HTTP_SUMMARY.json": "1808633e0ac98307f7a74ce643adc288eade6f57ded6777bb6e153ff0e96d266",
+    "LINUX_CLEANROOM.xml": "4413d9c12c7358a5ac715e105d9e4cf2ece2c3ec6f9b9205dbf774bf6c5ad1f6",
+    "SOL_CLEANROOM.json": "f9bb46a1a1378f70a8177e6de33217856b6c001a3c4bb12f92aa820ffcef5940",
+    "SOL_CPU.xml": "63a26fa3e2387b74928b8c36121884a49c5b1d57de0a0666923aad346f8d2d7e"
+  },
+  "scope": "Historical Luna/P1 infrastructure checks, not new Sol v2 executions",
+  "sol_v1_cleanroom": {
+    "image": "docqa-sol-cleanroom:v1",
+    "initial_failure": "Uncached cl100k_base.tiktoken network download blocked in network=none",
+    "initial_log": "CLEANROOM.log",
+    "initial_offline_failed": 1,
+    "initial_offline_passed": 13,
+    "new_paid_calls": 0,
+    "passed": 14,
+    "passed_log": "CLEANROOM_WITH_ASSET_DOWNLOAD.log",
+    "source_archive": "exports/stronger_reader_v1/docqa_sol_p1_v1.zip"
+  },
+  "sol_v1_cpu": {
+    "excluded_old_freeze_tests": 5,
+    "passed": 712,
+    "skipped": 8
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "actual_provider_requests": 12,
+  "added_existing_fixture_documents": 2,
+  "empty_packs": 0,
+  "failures": [],
+  "historical_luna_result": "11/12; H03 failure preserved",
+  "http_200": 12,
+  "independent_human_review": false,
+  "new_benchmark_metrics_claimed": false,
+  "p1_wire_contract_verified": 12,
+  "q2_full_input_identical": true,
+  "questions": 12,
+  "restored_documents": 5,
+  "reviewer_kind": "agent",
+  "semantic_passed": 12,
+  "snapshot_restore_verified": true,
+  "version": "submission-sol-p1-v1"
+}

@@ -1,0 +1,45 @@
+{
+  "comparison": {
+    "astra": {
+      "eligible": true,
+      "executions": 40,
+      "false_found": 0,
+      "false_refusal": 0,
+      "list_price_usage_usd": 0.308049,
+      "mean_generation_s": 5.172992382632832,
+      "median_generation_s": 4.937332478999451,
+      "new_eval_generations": 38,
+      "partial_correct": 1,
+      "semantic_pass": 40,
+      "stability_pass": 15,
+      "unsupported_claims": 0,
+      "usage": {
+        "input_tokens": 92063,
+        "output_tokens": 2124
+      }
+    },
+    "sol": {
+      "eligible": true,
+      "executions": 40,
+      "false_found": 0,
+      "false_refusal": 0,
+      "list_price_usage_usd": 0.0621438,
+      "mean_generation_s": 3.8325591030002935,
+      "median_generation_s": 3.4321731039963197,
+      "new_eval_generations": 38,
+      "partial_correct": 1,
+      "semantic_pass": 40,
+      "stability_pass": 15,
+      "unsupported_claims": 0,
+      "usage": {
+        "input_tokens": 92063,
+        "output_tokens": 2302
+      }
+    }
+  },
+  "execution_max_attempts": 1,
+  "historical": true,
+  "new_calls_for_v2": 0,
+  "original_sha256": "da26f946f02312ceb672b569fb0e2574e43dcb0ab8acfee8e108bf238cea5587",
+  "scope": "stronger_reader_v1 known/authored tests, not public benchmarks or blind test"
+}

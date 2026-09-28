@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.worker.env
+.operator/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+var/
+local_cpu_receipt/

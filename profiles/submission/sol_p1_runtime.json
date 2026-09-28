@@ -1,0 +1,69 @@
+{
+  "data_classification": "public",
+  "debug_access_policy": "owner-only-local-public",
+  "debug_artifacts": true,
+  "debug_retention_hours": 72,
+  "embedding": {
+    "dimension": 1024,
+    "endpoint_env": "DOCQA_EMBED_BASE_URL",
+    "family": "qwen",
+    "key_env": "DOCQA_EMBED_API_KEY",
+    "model_id": "Qwen/Qwen3-Embedding-0.6B",
+    "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "tokenizer_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3"
+  },
+  "enforce_context_limits": true,
+  "generators": {
+    "openai": {
+      "chat_template_sha256": null,
+      "context_limit_source": "conservative_local_cap_provider_context_unverified",
+      "dimension": null,
+      "document_instruction": "",
+      "endpoint_env": "DOCQA_OPENAI_BASE_URL",
+      "family": "openai",
+      "key_env": "DOCQA_OPENAI_API_KEY",
+      "live_smoke": false,
+      "max_output_tokens": 8192,
+      "model_context_budget": 98304,
+      "model_id": "gpt-6-sol",
+      "model_input_budget": 65536,
+      "origin_verification": "alias_only_upstream_not_verified",
+      "provider": "sosana",
+      "quantization": "none",
+      "query_instruction": "Given a question, retrieve passages that answer it.",
+      "reasoning": "medium",
+      "revision": "sosana-alias-no-immutable-snapshot-published",
+      "serving_image_digest": null,
+      "tokenizer_path": null,
+      "tokenizer_revision": "provider-managed-unpublished"
+    },
+    "qwen": {
+      "chat_template_sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326",
+      "context_limit_source": "owned_worker_enforced_16000_input_2048_output",
+      "dimension": null,
+      "endpoint_env": "DOCQA_QWEN_BASE_URL",
+      "family": "qwen",
+      "key_env": "DOCQA_QWEN_API_KEY",
+      "model_context_budget": 32768,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "model_input_budget": 16000,
+      "origin_verification": "pinned_checkpoint_served_by_owned_worker",
+      "provider": "owned_runpod_transformers",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "tokenizer_path": "artifacts/tokenizers/cdbee75f17c01a7cc42f958dc650907174af0554",
+      "tokenizer_revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
+    }
+  },
+  "index_cache_policy": "auto",
+  "reference_mode": "span",
+  "reranker": {
+    "dimension": null,
+    "endpoint_env": "DOCQA_RERANK_BASE_URL",
+    "family": "qwen",
+    "key_env": "DOCQA_RERANK_API_KEY",
+    "model_id": "Qwen/Qwen3-Reranker-0.6B",
+    "revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+    "tokenizer_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473"
+  },
+  "threshold_enabled": true
+}

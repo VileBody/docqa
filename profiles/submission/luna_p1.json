@@ -1,0 +1,11 @@
+{
+  "version": "submission-luna-p1-v1",
+  "generator": "openai",
+  "prompt_config": "profiles/reader_control_v1/P1.json",
+  "answerability_policy": "strict_answerability_v1",
+  "critic_mode": "off",
+  "query_policy": "raw",
+  "generation_cache": "disabled",
+  "retrieval_profile": "profiles/stage_2/txt.json",
+  "origin": "Existing single-doc submission retrieval, unchanged; reader-only selection does not optimize retrieval."
+}

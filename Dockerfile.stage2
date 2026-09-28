@@ -1,0 +1,24 @@
+FROM python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
+WORKDIR /app
+ENV PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false PIP_DISABLE_PIP_VERSION_CHECK=1
+COPY pyproject.toml /app/
+COPY requirements-stage2-tested.txt /app/requirements-stage2-tested.txt
+RUN python -c "import tomllib,subprocess; p=tomllib.load(open('pyproject.toml','rb'))['project']['optional-dependencies']; subprocess.check_call(['pip','install','--no-cache-dir','-c','requirements-stage2-tested.txt','setuptools>=68','wheel',*p['rag'],*p['service'],*p['dev']])"
+COPY docqa_rag /app/docqa_rag
+COPY docqa_service /app/docqa_service
+COPY docqa_corpus /app/docqa_corpus
+COPY profiles/stage_2 /app/profiles/stage_2
+COPY profiles/submission /app/profiles/submission
+COPY profiles/reader_control_v1/P1.json /app/profiles/reader_control_v1/P1.json
+COPY profiles/reader_control_v1/P1.system.txt /app/profiles/reader_control_v1/P1.system.txt
+COPY profiles/reader_control_v1/teaching_examples.json /app/profiles/reader_control_v1/teaching_examples.json
+RUN chmod 755 /app/profiles/reader_control_v1 && chmod 644 /app/profiles/reader_control_v1/*
+COPY profiles/stage_1/prices.json /app/profiles/stage_1/prices.json
+COPY artifacts/tokenizers /app/artifacts/tokenizers
+RUN chmod -R a+rX /app/profiles /app/artifacts/tokenizers
+RUN pip install --no-cache-dir --no-deps --no-build-isolation .
+RUN useradd --uid 10001 --create-home docqa && mkdir /data && chown docqa /data
+USER docqa
+ENV DOCQA_DATA_DIR=/data DOCQA_PROFILE=/app/profiles/submission/sol_p1_runtime.json DOCQA_READER_PROFILE=/app/profiles/submission/sol_p1_v2.json
+EXPOSE 8000
+CMD ["uvicorn","docqa_service.api:create_app","--factory","--host","0.0.0.0","--port","8000"]

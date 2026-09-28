@@ -1,0 +1,88 @@
+name: docqa-stage2
+x-runtime: &runtime
+  image: docqa-stage2:local
+  build:
+    context: ../..
+    dockerfile: Dockerfile.stage2
+  volumes:
+    - docqa-data:/data
+  environment: &settings
+    DOCQA_DATA_DIR: /data
+    DOCQA_REDIS_URL: redis://redis:6379/0
+    DOCQA_QDRANT_URL: http://qdrant:6333
+    DOCQA_NAMESPACE: ${DOCQA_NAMESPACE:-docqa2}
+    DOCQA_READER_PROFILE: ${DOCQA_READER_PROFILE:-/app/profiles/submission/sol_p1_v2.json}
+    DOCQA_PROFILE: ${DOCQA_PROFILE:-/app/profiles/submission/sol_p1_runtime.json}
+    DOCQA_API_KEY: ${DOCQA_API_KEY:?Set a local API credential}
+    DOCQA_RERANK_INPUT_LIMIT: ${DOCQA_RERANK_INPUT_LIMIT:-}
+    DOCQA_RERANK_OUTPUT_LIMIT: ${DOCQA_RERANK_OUTPUT_LIMIT:-}
+    DOCQA_PACK_CHARS: ${DOCQA_PACK_CHARS:-}
+    DOCQA_CHUNK_SIZE: ${DOCQA_CHUNK_SIZE:-}
+    DOCQA_CHUNK_OVERLAP: ${DOCQA_CHUNK_OVERLAP:-}
+    DOCQA_FUSION: ${DOCQA_FUSION:-}
+    DOCQA_RERANK_MODEL: ${DOCQA_RERANK_MODEL:-}
+    DOCQA_RERANK_REVISION: ${DOCQA_RERANK_REVISION:-}
+    DOCQA_RERANK_INSTRUCTION: ${DOCQA_RERANK_INSTRUCTION:-}
+    DOCQA_EMBED_DIMENSION: ${DOCQA_EMBED_DIMENSION:-}
+    DOCQA_EMBED_MODEL: ${DOCQA_EMBED_MODEL:-}
+    DOCQA_EMBED_REVISION: ${DOCQA_EMBED_REVISION:-}
+    DOCQA_EMBED_TOKENIZER_PATH: ${DOCQA_EMBED_TOKENIZER_PATH:-}
+    DOCQA_EMBED_INPUT_TOKENS: ${DOCQA_EMBED_INPUT_TOKENS:-}
+    DOCQA_EMBED_CONTEXT_TOKENS: ${DOCQA_EMBED_CONTEXT_TOKENS:-}
+    DOCQA_EMBED_OUTPUT_TOKENS: ${DOCQA_EMBED_OUTPUT_TOKENS:-}
+    DOCQA_QWEN_MODEL: ${DOCQA_QWEN_MODEL:-}
+    DOCQA_QWEN_REVISION: ${DOCQA_QWEN_REVISION:-}
+    DOCQA_QWEN_TOKENIZER_PATH: ${DOCQA_QWEN_TOKENIZER_PATH:-}
+    DOCQA_QWEN_INPUT_TOKENS: ${DOCQA_QWEN_INPUT_TOKENS:-}
+    DOCQA_QWEN_CONTEXT_TOKENS: ${DOCQA_QWEN_CONTEXT_TOKENS:-}
+    DOCQA_QWEN_OUTPUT_TOKENS: ${DOCQA_QWEN_OUTPUT_TOKENS:-}
+    DOCQA_OPENAI_MODEL: ${DOCQA_OPENAI_MODEL:-}
+    DOCQA_OPENAI_REVISION: ${DOCQA_OPENAI_REVISION:-}
+    DOCQA_OPENAI_TOKENIZER_PATH: ${DOCQA_OPENAI_TOKENIZER_PATH:-}
+    DOCQA_OPENAI_INPUT_TOKENS: ${DOCQA_OPENAI_INPUT_TOKENS:-}
+    DOCQA_OPENAI_CONTEXT_TOKENS: ${DOCQA_OPENAI_CONTEXT_TOKENS:-}
+    DOCQA_OPENAI_OUTPUT_TOKENS: ${DOCQA_OPENAI_OUTPUT_TOKENS:-}
+    DOCQA_TEST_MODE: ${DOCQA_TEST_MODE:-0}
+    DOCQA_ALLOW_PDF: ${DOCQA_ALLOW_PDF:-0}
+    DOCQA_MODEL_CALLS_ENABLED: ${DOCQA_MODEL_CALLS_ENABLED:-0}
+    DOCQA_BUDGET_LEDGER: ${DOCQA_BUDGET_LEDGER:-/data/authorized-budget.json}
+    DOCQA_EMBED_BASE_URL: ${DOCQA_EMBED_BASE_URL:-}
+    DOCQA_EMBED_API_KEY: ${DOCQA_EMBED_API_KEY:-}
+    DOCQA_RERANK_BASE_URL: ${DOCQA_RERANK_BASE_URL:-}
+    DOCQA_RERANK_API_KEY: ${DOCQA_RERANK_API_KEY:-}
+    DOCQA_QWEN_BASE_URL: ${DOCQA_QWEN_BASE_URL:-}
+    DOCQA_QWEN_API_KEY: ${DOCQA_QWEN_API_KEY:-}
+    DOCQA_OPENAI_BASE_URL: ${DOCQA_OPENAI_BASE_URL:-}
+    DOCQA_OPENAI_API_KEY: ${DOCQA_OPENAI_API_KEY:-}
+  depends_on:
+    redis:
+      condition: service_healthy
+    qdrant:
+      condition: service_started
+  restart: "no"
+services:
+  api:
+    <<: *runtime
+    ports: ["127.0.0.1:${DOCQA_HTTP_PORT:-18080}:8000"]
+  worker:
+    <<: *runtime
+    command: ["celery", "-A", "docqa_service.tasks:app", "worker", "--concurrency=2", "--loglevel=INFO"]
+  dispatcher:
+    <<: *runtime
+    command: ["celery", "-A", "docqa_service.tasks:app", "beat", "--schedule=/data/celerybeat-schedule", "--loglevel=INFO"]
+  redis:
+    image: redis:7.4-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499
+    command: ["redis-server", "--appendonly", "yes", "--appendfsync", "always"]
+    volumes: ["redis-data:/data"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 1s
+      retries: 20
+  qdrant:
+    image: qdrant/qdrant@sha256:f1c7272cdac52b38c1a0e89313922d940ba50afd90d593a1605dbbc214e66ffb
+    volumes: ["qdrant-data:/qdrant/storage"]
+volumes:
+  docqa-data:
+  redis-data:
+  qdrant-data:

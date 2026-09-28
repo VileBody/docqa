@@ -1,0 +1,41 @@
+{
+  "document": {
+    "assembly": "single_file",
+    "doc_id": "synthetic-faithful_paraphrase",
+    "doc_title": "synthetic-faithful_paraphrase",
+    "pages": [
+      {
+        "boxes": [],
+        "end": 74,
+        "extraction_status": "text",
+        "page": 1,
+        "start": 0,
+        "text": "Срок осмотра оборудования — 6 рабочих дней с момента получения обращения.\n"
+      }
+    ],
+    "parser": "utf8-exact-formfeed-pages-v1",
+    "pdf_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821",
+    "text": "Срок осмотра оборудования — 6 рабочих дней с момента получения обращения.\n",
+    "text_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821"
+  },
+  "pack": [
+    {
+      "chunk": {
+        "char_end": 74,
+        "char_start": 0,
+        "chunk_index": 0,
+        "doc_id": "synthetic-faithful_paraphrase",
+        "doc_title": "synthetic-faithful_paraphrase",
+        "page_from": 1,
+        "page_to": 1,
+        "pdf_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821",
+        "section": null,
+        "source_id": "a358e26e0984458299fda001951a055e64fd14bc855541e69dd0173b672beeb3",
+        "text": "Срок осмотра оборудования — 6 рабочих дней с момента получения обращения.\n",
+        "text_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821"
+      },
+      "rerank_score": null,
+      "retrieval_score": 1.0
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "binding_sha256": "a26faccd9887272339609ce6fc6603c6d61290b152bd474490533f322d9f3642",
+  "changed_profile_fields": [
+    "version",
+    "max_attempts"
+  ],
+  "first_attempt_identity_unchanged": true,
+  "historical_live_execution_profile": "submission-sol-p1-v1",
+  "max_attempts": 3,
+  "new_gpu_sessions": 0,
+  "new_paid_calls": 0,
+  "old_max_attempts": 1,
+  "previous_version": "submission-sol-p1-v1",
+  "profile_sha256": "09f8f776a59a6a56672c8f3f03bce15544d264d9f2e828229a765fac5b3c4589",
+  "retry_cpu_passed": 25,
+  "retry_cpu_tests": 25,
+  "risks": [
+    "A timeout can occur after the provider billed a request; each retry reserves budget and keeps attempt records.",
+    "No hidden reasoning or upstream attestation."
+  ],
+  "runtime_code_changed": false,
+  "runtime_code_source_sha256": "c83c9aef88a378afe3fbd9433a053f19b4d65be965511c406987de2f993d1390",
+  "test_kind": "CPU / httpx.MockTransport; no live fault injection",
+  "version": "submission-sol-p1-v2"
+}

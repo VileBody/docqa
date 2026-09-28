@@ -1,0 +1,304 @@
+{
+  "current_max_attempts": 3,
+  "current_submission": "submission-sol-p1-v2",
+  "events": [
+    {
+      "case_id": "H01",
+      "elapsed_s": 10.031763791004778,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+        "question": "Какой код используется для отслеживания?"
+      },
+      "response": {
+        "answer": "Для отслеживания заявки используется код ALPHA-77.",
+        "citations": [
+          {
+            "boxes": [],
+            "char_end": 489,
+            "char_start": 433,
+            "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+            "match_policy": "issued_span",
+            "page": 1,
+            "source_format": "txt",
+            "source_id": "3e598e8796844339dee71b6828b8a0da4a290c75e5b237f881a3a52121f7cdba",
+            "source_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254",
+            "text": "Пункт 4.6. Для отслеживания заявки служит код ALPHA-77.\n",
+            "text_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+          }
+        ],
+        "found": true,
+        "status": "complete",
+        "support_check": "citation_authenticity_only"
+      },
+      "source": {
+        "document_path": "examples/acceptance/alpha.txt",
+        "document_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+      },
+      "status": 200
+    },
+    {
+      "case_id": "H03",
+      "elapsed_s": 7.800900791989989,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+        "question": "Сколько рабочих дней ждать стандартную отправку после подачи заявки?"
+      },
+      "response": {
+        "answer": "Недостаточно сведений в источниках.",
+        "citations": [],
+        "found": false,
+        "status": "not_found",
+        "support_check": "abstained"
+      },
+      "source": {
+        "document_path": "examples/acceptance/alpha.txt",
+        "document_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+      },
+      "status": 200
+    },
+    {
+      "case_id": "H04",
+      "elapsed_s": 3.9409078750031767,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+        "question": "Можно ли отправить коробку без письменного согласования?"
+      },
+      "response": {
+        "answer": "Нет, отправка коробки без письменного согласования запрещена.",
+        "citations": [
+          {
+            "boxes": [],
+            "char_end": 433,
+            "char_start": 373,
+            "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+            "match_policy": "issued_span",
+            "page": 1,
+            "source_format": "txt",
+            "source_id": "3e598e8796844339dee71b6828b8a0da4a290c75e5b237f881a3a52121f7cdba",
+            "source_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254",
+            "text": "Пункт 4.5. Отправка без письменного согласования запрещена.\n",
+            "text_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+          }
+        ],
+        "found": true,
+        "status": "complete",
+        "support_check": "citation_authenticity_only"
+      },
+      "source": {
+        "document_path": "examples/acceptance/alpha.txt",
+        "document_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+      },
+      "status": 200
+    },
+    {
+      "case_id": "H05",
+      "elapsed_s": 4.517786791999242,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+        "question": "Сколько стоит доставка трех коробок?"
+      },
+      "response": {
+        "answer": "Доставка трёх коробок стоит 120 × 3 = 360 рублей.",
+        "citations": [
+          {
+            "boxes": [],
+            "char_end": 270,
+            "char_start": 206,
+            "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+            "match_policy": "issued_span",
+            "page": 1,
+            "source_format": "txt",
+            "source_id": "3e598e8796844339dee71b6828b8a0da4a290c75e5b237f881a3a52121f7cdba",
+            "source_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254",
+            "text": "Пункт 4.3. Стоимость доставки составляет 120 рублей за коробку.\n",
+            "text_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+          }
+        ],
+        "found": true,
+        "status": "complete",
+        "support_check": "citation_authenticity_only"
+      },
+      "source": {
+        "document_path": "examples/acceptance/alpha.txt",
+        "document_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+      },
+      "status": 200
+    },
+    {
+      "case_id": "H10",
+      "elapsed_s": 5.180701290999423,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "a11b66a7b79cc02729de55d0f9fec47d4e1f290b45d050cf2347697b4ed7b055",
+        "question": "Какой код финишного маяка?"
+      },
+      "response": {
+        "answer": "Код финишного маяка: ZENITH-482.",
+        "citations": [
+          {
+            "boxes": [],
+            "char_end": 5187,
+            "char_start": 5130,
+            "document_id": "a11b66a7b79cc02729de55d0f9fec47d4e1f290b45d050cf2347697b4ed7b055",
+            "match_policy": "issued_span",
+            "page": 100,
+            "source_format": "txt",
+            "source_id": "802dc230f5bdc4753579088e1e2b1a4b06ccef28d4ef91750559b8ab72bef6ac",
+            "source_sha256": "e7e4e2dcbf64928cde3d03a0890d5ce582d5345ca9cbe9642010b1f6a2e747bb",
+            "text": "Логическая страница 100. Код финишного маяка: ZENITH-482.",
+            "text_sha256": "e7e4e2dcbf64928cde3d03a0890d5ce582d5345ca9cbe9642010b1f6a2e747bb"
+          }
+        ],
+        "found": true,
+        "status": "complete",
+        "support_check": "citation_authenticity_only"
+      },
+      "source": {
+        "document_path": "examples/acceptance/hundred.txt",
+        "document_sha256": "e7e4e2dcbf64928cde3d03a0890d5ce582d5345ca9cbe9642010b1f6a2e747bb"
+      },
+      "status": 200
+    },
+    {
+      "case_id": "H11",
+      "elapsed_s": 4.069056499996805,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+        "question": "Какова стоимость страхования коробки при доставке?"
+      },
+      "response": {
+        "answer": "Недостаточно сведений в источниках.",
+        "citations": [],
+        "found": false,
+        "status": "not_found",
+        "support_check": "abstained"
+      },
+      "source": {
+        "document_path": "examples/acceptance/alpha.txt",
+        "document_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+      },
+      "status": 200
+    },
+    {
+      "case_id": "H12",
+      "elapsed_s": 3.8527782500023022,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "86de5ec1f15654ca54110c8422e89b8e8d880c72209c278393ae8e2f6d3880b1",
+        "question": "Какова стоимость страхования коробки при доставке?"
+      },
+      "response": {
+        "answer": "Недостаточно сведений в источниках.",
+        "citations": [],
+        "found": false,
+        "status": "not_found",
+        "support_check": "abstained"
+      },
+      "source": {
+        "document_path": "examples/acceptance/alpha.txt",
+        "document_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254"
+      },
+      "status": 200
+    },
+    {
+      "case_id": "faithful_paraphrase",
+      "elapsed_s": 4.366887458003475,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "964d724588a8d57356ac094c0e2c23d2abf2a5c9188c531acbba294274ec6417",
+        "question": "За какой срок осматривают оборудование после получения обращения?"
+      },
+      "response": {
+        "answer": "Оборудование осматривают в течение 6 рабочих дней с момента получения обращения.",
+        "citations": [
+          {
+            "boxes": [],
+            "char_end": 74,
+            "char_start": 0,
+            "document_id": "964d724588a8d57356ac094c0e2c23d2abf2a5c9188c531acbba294274ec6417",
+            "match_policy": "issued_span",
+            "page": 1,
+            "source_format": "txt",
+            "source_id": "a358e26e0984458299fda001951a055e64fd14bc855541e69dd0173b672beeb3",
+            "source_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821",
+            "text": "Срок осмотра оборудования — 6 рабочих дней с момента получения обращения.\n",
+            "text_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821"
+          }
+        ],
+        "found": true,
+        "status": "complete",
+        "support_check": "citation_authenticity_only"
+      },
+      "source": {
+        "document_path": "examples/acceptance/source_fidelity_v2/faithful_paraphrase.txt",
+        "document_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821"
+      },
+      "status": 200
+    },
+    {
+      "case_id": "explicit_equivalence",
+      "elapsed_s": 4.769063291998464,
+      "operation": "question",
+      "request": {
+        "diagnostics": true,
+        "document_id": "0e65897618cfbb1d194c81a2cfe79120de3adefc8e6fe493023a8ef1d417ce12",
+        "question": "Каков срок завершения рассмотрения с подачи заявления?"
+      },
+      "response": {
+        "answer": "Рассмотрение завершается в течение 3 рабочих дней с подачи заявления: по регламенту момент подачи определяется как момент регистрации.",
+        "citations": [
+          {
+            "boxes": [],
+            "char_end": 158,
+            "char_start": 0,
+            "document_id": "0e65897618cfbb1d194c81a2cfe79120de3adefc8e6fe493023a8ef1d417ce12",
+            "match_policy": "issued_span",
+            "page": 1,
+            "source_format": "txt",
+            "source_id": "ecb366684ada09bc62ca6cb2de6253fa813d47ca347c771d27059eedd48a452d",
+            "source_sha256": "24c8cc38410e9d4573d57b7177979836cd32c07dbbc8ffaabcaf0de2505d5469",
+            "text": "В этом регламенте момент подачи заявления определяется как момент его регистрации. Рассмотрение завершается в течение 3 рабочих дней с регистрации заявления.\n",
+            "text_sha256": "24c8cc38410e9d4573d57b7177979836cd32c07dbbc8ffaabcaf0de2505d5469"
+          }
+        ],
+        "found": true,
+        "status": "complete",
+        "support_check": "citation_authenticity_only"
+      },
+      "source": {
+        "document_path": "examples/acceptance/source_fidelity_v2/explicit_equivalence.txt",
+        "document_sha256": "24c8cc38410e9d4573d57b7177979836cd32c07dbbc8ffaabcaf0de2505d5469"
+      },
+      "status": 200
+    }
+  ],
+  "execution": {
+    "completion_tokens_cap": 8192,
+    "max_attempts": 1,
+    "model": "gpt-6-sol",
+    "profile": "submission-sol-p1-v1",
+    "profile_sha256": "6a1662f13dfd9a227d8566718f2d9714774ff0155a61ba74235d58c3946fb579",
+    "provider": "Sosana",
+    "reasoning_effort": "medium",
+    "revision": "sosana-alias-no-immutable-snapshot-published",
+    "upstream_verified": false
+  },
+  "new_live_calls": 0,
+  "origin": "Actual Sol/P1 v1 live HTTP responses on own distributable synthetic TXT; historical execution retained unchanged, not rerun for retry-only v2.",
+  "raw_http_sha256": "6933d598b3550446aa912d41c1fb98746a151365008540aba21921b5d64bcc60",
+  "redaction": "Select synthetic question events only. Retain question, status, elapsed time and response answer/found/status/support_check/citations verbatim. Omit operational request_id/generation/fingerprint/backend/shadow/diagnostics, upload/poll/catalog events. No gold, reviewer notes, real-TXT excerpts or full private model trace.",
+  "schema": "docqa-public-synthetic-http-v2"
+}

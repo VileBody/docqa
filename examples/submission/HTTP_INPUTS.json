@@ -1,0 +1,65 @@
+{
+  "version": "final_luna_p1_http_smoke_v1",
+  "items": [
+    {
+      "id": "H01",
+      "kind": "exact_identifier",
+      "selection_guidance": "Существующий demo A; точный пункт/сумма/код. Одновременно сохранить diagnostics.",
+      "requirements": [
+        "T05",
+        "T07",
+        "T17",
+        "T19",
+        "T20",
+        "T26",
+        "T29"
+      ],
+      "document_path": "examples/acceptance/alpha.txt",
+      "document_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254",
+      "question": "Какой код используется для отслеживания?",
+      "status": "FROZEN_BEFORE_LIVE"
+    },
+    {
+      "id": "H06",
+      "kind": "document_isolation_pair",
+      "selection_guidance": "Похожий demo B, тот же вопрос, что H01; другой правильный факт, только свой документ.",
+      "requirements": [
+        "T05",
+        "T11"
+      ],
+      "document_path": "examples/acceptance/beta.txt",
+      "document_sha256": "1eeafbc4d7efaf2f10a8ce81ca4ac5d22bef0e5f83e318c35d3d068cb22a5be5",
+      "question": "Какой код используется для отслеживания?",
+      "status": "FROZEN_BEFORE_LIVE"
+    },
+    {
+      "id": "H10",
+      "kind": "late_page_100",
+      "selection_guidance": "Новый HTTP upload существующего 100-страничного TXT и QA о факте около страницы100; реальный cold ingestion.",
+      "requirements": [
+        "T02",
+        "T03",
+        "T04",
+        "T06",
+        "T10",
+        "T13"
+      ],
+      "document_path": "examples/acceptance/hundred.txt",
+      "document_sha256": "e7e4e2dcbf64928cde3d03a0890d5ce582d5345ca9cbe9642010b1f6a2e747bb",
+      "question": "Какой код финишного маяка?",
+      "status": "FROZEN_BEFORE_LIVE"
+    },
+    {
+      "id": "H11",
+      "kind": "independent_q2_after_q1",
+      "selection_guidance": "Самодостаточный Q2 после H01/H06; сохранить фактический model input без предыдущего Q1.",
+      "requirements": [
+        "T09"
+      ],
+      "document_path": "examples/acceptance/alpha.txt",
+      "document_sha256": "dde16d3344387d8fb89ffd2b5837de61cb21339646720693ade997cc8d515254",
+      "question": "Какова стоимость страхования коробки при доставке?",
+      "status": "FROZEN_BEFORE_LIVE"
+    }
+  ]
+}

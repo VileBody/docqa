@@ -1,0 +1,42 @@
+{
+  "available_secret_scan_scope": "known values in current env and accessible root/workspace dotenv; file scan only, not Git history",
+  "candidate_package": {
+    "bytes": 2313690,
+    "files": 133,
+    "hashes_and_crc_verified": true,
+    "known_secrets_scanned": 2,
+    "sha256": "367dea5eb22a65d3b3bc159effd21432199953df6549cf01790704035fe1f19b"
+  },
+  "clean_build": true,
+  "host_xml_sha256": "82cc4748e1429aadab6672002489d9f5c4c9676e9a16e4e28b329c05147b53ba",
+  "image": "docqa-sol-submission:v2",
+  "linux_network": "disabled (--network none)",
+  "linux_tokenizer_cache": "Existing verified cl100k_base asset mounted read-only; no network acquisition.",
+  "new_gpu_sessions": 0,
+  "new_paid_calls": 0,
+  "public_subset": {
+    "host": {
+      "passed": 42,
+      "skipped": 0,
+      "tests": 42,
+      "xml_sha256": "82cc4748e1429aadab6672002489d9f5c4c9676e9a16e4e28b329c05147b53ba"
+    },
+    "linux": {
+      "passed": 42,
+      "skipped": 0,
+      "tests": 42,
+      "xml_sha256": "3d94bd8f3b1ff129f0ace41b31907f471d10e5beb425fe8311acfb08667bd563"
+    },
+    "release": {
+      "passed": 42,
+      "skipped": 0,
+      "tests": 42,
+      "xml_sha256": "ecd7036dbec733fe2fb38517ab0379f1123fe009d71a46ffb57963853d26e8da"
+    }
+  },
+  "retry_cpu_passed": 25,
+  "retry_cpu_tests": 25,
+  "scope": "CPU/MockTransport plus packaging; historical live scores unchanged",
+  "tests_are_overlapping_not_additive": true,
+  "version": "submission-sol-p1-v2"
+}
