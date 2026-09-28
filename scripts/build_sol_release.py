@@ -53,6 +53,10 @@ def build(dest):
         'examples/acceptance/beta.txt',
         'examples/acceptance/hundred.txt',
         'examples/acceptance/source_fidelity_v2/faithful_paraphrase.pack.json',
+        'docs/README.md',
+        'docs/EXPERIMENTS.md',
+        'docs/submission/evidence/README.md',
+        'docs/submission/README.md',
         'docs/PROJECT_GUIDE.md',
         'docs/RESULTS_GUIDE.md',
         'docs/RUNNING.md',
@@ -69,7 +73,7 @@ def build(dest):
     ]
     paths += [ROOT/n for n in names]
     # Explicit evidence allowlist: no raw traces, evaluator rubrics or obsolete unlabelled logs.
-    evidence=['HISTORICAL_INFRASTRUCTURE.json','HISTORICAL_LUNA_EXAMPLES_METADATA.json',
+    evidence=['DECISION_HISTORY.json','HISTORICAL_INFRASTRUCTURE.json','HISTORICAL_LUNA_EXAMPLES_METADATA.json',
         'SOL_HTTP_SUMMARY.json','SOL_VECTOR_REUSE.json','SOL_READER_COMPARISON.json',
         'SUBMISSION_V2_CHANGES.json','SUBMISSION_V2_VALIDATION.json','SYNTHETIC_HTTP_OUTPUTS.json']
     paths += [ROOT/'docs/submission/evidence'/name for name in evidence]

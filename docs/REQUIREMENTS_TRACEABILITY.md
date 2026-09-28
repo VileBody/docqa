@@ -1,37 +1,64 @@
-# Соответствие ТЗ — Sol/P1 v2
+# Что реализовано и чем проверено
 
-Текущая доработка — retry configuration и публичная поставка. Новых live-вызовов нет. Исторические Sol v1 HTTP12/12 (одна попытка) не переименованы в новый прогон.
+[Документация](README.md) · [Итоговый отчёт](FINAL_REPORT.md) · [Ответы API](API_EXAMPLES.md)
 
-| ID | Статус | Доказательство и границы |
+Матрица связывает требования с реализацией. **PASS означает прохождение указанной проверки в указанной версии**, а не независимую гарантию корректности всех будущих ответов.
+
+Точный прежний реестр с версиями и ссылками на свидетельства сохранён в [REQUIREMENTS_TRACEABILITY.json](REQUIREMENTS_TRACEABILITY.json). Ниже — его читательское представление. Исторические проверки не объявлены повторёнными после смены reader.
+
+## API и работа с документами
+
+| ID | Требование | Подтверждение / ограничение |
 |---|---|---|
-| T01 | PASS | FastAPI routes and request/response models [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T02 | PASS | Queued upload and durable task identity [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T03 | PASS | Unknown task 404, ready/failed states [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T04 | PASS | Catalog pending/failed/ready; idempotency [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T05 | PASS | doc_id/snapshot/ready filtering and exact citation scope [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T06 | PASS | New cold upload of existing 100-logical-page TXT; real Celery indexing; exact page-100 answer. Small functional fixture, not throughput. [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T07 | PASS | Historical Sol/P1 v1 HTTP: 12/12 semantic checks, H03 correctly not_found with nonempty pack; normal paraphrase and explicit equivalence preserved. V2 changes only retries; no new live quality score. |
-| T08 | PASS | Historical Sol/P1 v1: H03/H09/H11/H12 correct not_found, explicit prohibition and calculation retained. Strict states and authentic spans covered by public CPU tests; v2 transport does not reroll semantic results. |
-| T09 | PASS | H11/H12 actual P1 model inputs equal, 14 messages, 6 fixed teaching pairs, no previous user history; two provider calls. [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T10 | PASS | Real Celery/Redis including worker SIGKILL [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T11 | PASS | Shared generation collection and doc filter [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T12 | PASS | Qdrant document payload; Redis task state [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T13 | PASS | Chunk payload and offsets validated on publication/restore [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T14 | PASS | doc_id/snapshot/ready payload indexes [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T15 | PASS | dense and bm25 in each point [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T16 | PASS | Frozen BM25 statistics and append vocabulary rebuild [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T17 | PASS | One primary native fusion request; diagnostic queries separate [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T18 | PASS | Validated env fusion/input limits [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T19 | PASS | 12 actual separately priced-in-GPU reranker calls; confirmed explicit-instruction-v2 worker, candidates and pack trace. [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T20 | PASS | Pack only from ranked authentic candidates; bounded top-k [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T21 | PASS | Env reranker model/revision/input/output limits wired [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T22 | PASS | Historical Sol/P1 v1: 12 actual LangChain reader completions, 5 restored documents + 2 existing fixtures; full logical requests verified. V2 first-attempt messages/schema/parameters unchanged, tested locally. |
-| T23 | PASS | Pydantic contracts and invalid citation/model rejection [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T24 | PASS | Profile defaults/env overrides, complete example config [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T25 | PASS | V2 actual Calls factory: at most 3 attempts total on classified transient transport/408/429/500/502/503/504 errors; 503 then success, permanent/invalid errors once, three failures stop, budget/deadline blocks another send. Each attempt retained in ledger/records. CPU MockTransport, not live fault-test. |
-| T26 | PASS | Observed same-snapshot branch replay and separate query cost [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T27 | PASS | V2 explicit allowlist ZIP with hashes/CRC and available-secret scan; 42/42 self-contained public tests pass on host, isolated release and clean Linux image with network disabled. Historical cleanrooms remain separate: Luna 30 tests; Sol v1 14 tests. No new paid acceptance. |
-| T28 | PASS | Architecture, limits, production gaps documented [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
-| T29 | PASS | Actual exact identifier H01 and nonempty no-answer H11 published unedited in API_EXAMPLES; H03 failure also retained. [Historical infrastructure evidence plus unchanged runtime; not a new live execution.] |
+| T01 | HTTP API и контракты запросов | PASS: FastAPI routes и request/response models |
+| T02 | Фоновая загрузка | PASS: задача очереди с устойчивым ID |
+| T03 | Состояние задачи | PASS: ready/failed, 404 для неизвестной задачи |
+| T04 | Каталог документов | PASS: pending/failed/ready и идемпотентность |
+| T05 | Ответ только по выбранному документу | PASS: фильтры документа, snapshot и ready; проверка принадлежности цитат |
+| T06 | Документ до 100 логических страниц | PASS: историческая холодная индексация TXT и ответ по странице 100; небольшая fixture, не нагрузочный тест |
+| T09 | Отсутствие истории диалога | PASS: полные inputs H11/H12 совпали; 14 сообщений включают P1 и 6 фиксированных teaching-пар |
+| T10 | Надёжность фоновой работы | PASS: исторические Celery/Redis и worker SIGKILL |
 
-[Текущие синтетические JSON-примеры](submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json) · [точные версии и provenance](REQUIREMENTS_TRACEABILITY.json). Исторические Luna H03 failure и cleanroom30, Sol v1 cleanroom14 сохранены раздельно.
+Подробности инфраструктуры — [исторические свидетельства](submission/evidence/HISTORICAL_INFRASTRUCTURE.json). В финальном Sol-прогоне 100-страничный документ восстанавливали, а не индексировали холодно повторно.
+
+## Хранилище, поиск и контекст
+
+| ID | Требование | Подтверждение / ограничение |
+|---|---|---|
+| T11 | Совместное хранилище с изоляцией документов | PASS: общая generation collection и document filter |
+| T12 | Разделение текста и состояния задач | PASS: Qdrant payload и Redis task state |
+| T13 | Координаты исходного текста | PASS: offsets проверяются при публикации и restore |
+| T14 | Индексированные фильтры | PASS: payload indexes для doc_id/snapshot/ready |
+| T15 | Два поисковых представления | PASS: dense и BM25 в каждой точке |
+| T16 | Согласованность BM25 | PASS: зафиксированная статистика; перестройка словаря при добавлении |
+| T17 | Объединение выдач | PASS: один основной native fusion; диагностика отдельно |
+| T18 | Настраиваемые пределы поиска | PASS: валидация env fusion/input limits |
+| T19 | Настоящий reranker | PASS: исторические 12 вызовов, инструкция worker и trace кандидатов/pack |
+| T20 | Контекст из проверенных кандидатов | PASS: аутентичные источники и ограниченный top-k |
+| T21 | Конфигурация reranker | PASS: model/revision/input/output limits подключены |
+| T26 | Диагностика ветвей поиска | PASS: отдельный replay dense/BM25 на том же snapshot; это не внутренние счётчики первого fusion |
+
+[Как устроен поиск](PROJECT_GUIDE.md) · [Почему оставили текущую конфигурацию](EXPERIMENTS.md).
+
+## Ответ, источники и ошибки
+
+| ID | Требование | Подтверждение / ограничение |
+|---|---|---|
+| T07 | Ответ соответствует вопросу | PASS на Sol v1 HTTP: 12/12; H03 — not_found, перефразировка и эквивалентность сохранены |
+| T08 | Корректные отказы и отрицательные факты | PASS на исторических кейсах и CPU-контрактах; v2 не повторяет смысловые ошибки ради удачного ответа |
+| T22 | Настоящий reader в штатном сервисе | PASS: 12 LangChain completions Sol v1, 5 восстановленных документов + 2 учебных TXT; первая попытка v2 локально совпадает с v1 |
+| T23 | Валидация ответа и цитат | PASS: Pydantic-контракты и отклонение невалидных model/evidence outputs |
+| T24 | Конфигурация сервиса | PASS: defaults, env overrides и пример настроек |
+| T25 | Ограниченные транспортные повторы | PASS: до 3 попыток всего; временные ошибки, бюджет/deadline, остановка на постоянных/невалидных результатах. CPU MockTransport, не live fault-test |
+| T29 | Публичные реальные примеры | PASS: точный идентификатор и отказ при непустом pack опубликованы; старый Luna H03 failure учтён отдельно |
+
+[Сохранённые ответы Sol](submission/evidence/SYNTHETIC_HTTP_OUTPUTS.json) · [Изменения v2](submission/evidence/SUBMISSION_V2_CHANGES.json). В старом машинном реестре упоминание H03 failure относится к Luna; текущий публичный Sol H03 — корректный отказ.
+
+## Поставка и документация
+
+| ID | Требование | Подтверждение / ограничение |
+|---|---|---|
+| T27 | Изолированная публичная поставка | PASS: allowlist ZIP, hashes/CRC, проверка доступных секретов; 42/42 public tests. Прежние cleanroom-наборы Luna 30 и Sol v1 14 учитываются отдельно |
+| T28 | Архитектура и ограничения | PASS: устройство, запуск, история выбора и production gaps описаны |
+
+[Проверки упаковки](submission/evidence/SUBMISSION_V2_VALIDATION.json) · [Операционные ограничения](RUNNING.md#данные-и-эксплуатация).

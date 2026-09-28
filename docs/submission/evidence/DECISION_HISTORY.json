@@ -1,0 +1,421 @@
+{
+  "version": "decision-history-v1",
+  "purpose": "Curated aggregate evidence for the documentation narrative, not a new evaluation or full reproducibility bundle.",
+  "new_model_calls": 0,
+  "independent_human_review": false,
+  "sources": {
+    "query_policies": {
+      "research_artifact": "reports/stages/stage_2_wave1_completed.md",
+      "sha256": "d505fcac928b4b5d28572db09cbd9a3d0f9e6e25d982e181ad5966917e6c1784",
+      "included_in_public_release": false
+    },
+    "retrieval": {
+      "research_artifact": "reports/stages/stage_2_real_v3_closeout_01/RETRIEVAL_FINDINGS.md",
+      "sha256": "7831a5abc696e860207629789f399a78d233e8c3dca7596365575fc624be8fc6",
+      "included_in_public_release": false
+    },
+    "synthesis": {
+      "research_artifact": "reports/stages/stage_2_real_v3_closeout_01/SYNTHESIS_SUMMARY.json",
+      "sha256": "5232792f1dadd075b1f5a15e09c0778b172a7dfcad40fe8b23deeea518fd5c88",
+      "included_in_public_release": false
+    },
+    "agents": {
+      "research_artifact": "reports/stages/stage3_v2/RESULTS.json",
+      "sha256": "f2d733a5c7ed9237eefbe2cdfb3b24923b50fa72ffe2135e9a54834864576aba",
+      "included_in_public_release": false
+    },
+    "agents_summary": {
+      "research_artifact": "reports/stages/stage3_v2/SUMMARY_RU.md",
+      "sha256": "84e77ade91bfef95a10653c108152720b2f54fcea64c6f5d394c8e1451d6826f",
+      "included_in_public_release": false
+    },
+    "reader_control": {
+      "research_artifact": "reports/reader_control_v1/REPORT.md",
+      "sha256": "2b263105585e2b31369b5305b21c3b9e56a1c515d6b375f3638d456eb5a53012",
+      "included_in_public_release": false
+    },
+    "reader_recovery": {
+      "research_artifact": "reports/reader_transport_v2_retry1/REPORT.md",
+      "sha256": "6c0c08c3ee1471ed124a3b97c01f7089406dc4c0fc6161c061ce4b9d8bf1f45f",
+      "included_in_public_release": false
+    },
+    "answer_fit": {
+      "research_artifact": "reports/answer_fit_v1/REPORT.md",
+      "sha256": "60c05343ed353d6548381f3a99ccbae1945f49ecbd011748fbdcebf836c9c693",
+      "included_in_public_release": false
+    },
+    "source_fidelity": {
+      "research_artifact": "docs/acceptance/source_fidelity_live_v2/REPORT.md",
+      "sha256": "05075a152ea7b46fe57319d41d64fdae6c08373b242b4744d740ce90f7568ba9",
+      "included_in_public_release": false
+    },
+    "stronger_reader": {
+      "research_artifact": "reports/stronger_reader_v1/REPORT.md",
+      "sha256": "e307b7a5c0acfba46e85c48e0c9adb39e6e506d99eb98211df1ae24f90703789",
+      "included_in_public_release": false
+    },
+    "agent_first_wave": {
+      "research_artifact": "reports/stages/stage_3_wave_01/SUMMARY.json",
+      "sha256": "d2c56406d7411313babfc19e1f85516af79920876700e6682e340dfeebb18a5c",
+      "included_in_public_release": false
+    }
+  },
+  "query_policies": {
+    "source": "query_policies",
+    "scope": "S/dev common 32 questions, 17 positive; final pack evidence coverage, not answer accuracy",
+    "rows": [
+      {
+        "policy": "raw",
+        "technical_success": 32,
+        "sufficient_pack": 15,
+        "positive_denominator": 17,
+        "median_wall_s": 1.317
+      },
+      {
+        "policy": "anchor",
+        "technical_success": 32,
+        "sufficient_pack": 15,
+        "positive_denominator": 17,
+        "median_wall_s": 1.296
+      },
+      {
+        "policy": "paraphrase Qwen",
+        "technical_success": 30,
+        "sufficient_pack": 14,
+        "positive_denominator": 17,
+        "median_wall_s": 3.335
+      },
+      {
+        "policy": "paraphrase Sosana/Luna",
+        "technical_success": 32,
+        "sufficient_pack": 15,
+        "positive_denominator": 17,
+        "median_wall_s": 4.509
+      }
+    ]
+  },
+  "real_retrieval": {
+    "source": "retrieval",
+    "scope": "136 real-dev questions, 100 positive, 36 negative; no reserved tuning",
+    "candidate_sufficient": 95,
+    "baseline_pack_sufficient": 82,
+    "expanded_pack_sufficient": 92,
+    "positive_denominator": 100,
+    "planner_positive_denominator": 24,
+    "planner_cases": 32,
+    "planner_rows": [
+      {
+        "policy": "raw",
+        "technical_success": 32,
+        "sufficient_pack": 24
+      },
+      {
+        "policy": "reranker support suffix",
+        "technical_success": 32,
+        "sufficient_pack": 23
+      },
+      {
+        "policy": "structured Sosana/Luna",
+        "technical_success": 32,
+        "sufficient_pack": 23
+      },
+      {
+        "policy": "decomposition Sosana/Luna",
+        "technical_success": 30,
+        "sufficient_pack": 22
+      },
+      {
+        "policy": "decomposition Qwen",
+        "technical_success": 25,
+        "sufficient_pack": 18
+      },
+      {
+        "policy": "structured Qwen v1",
+        "technical_success": 4,
+        "sufficient_pack": 2
+      }
+    ]
+  },
+  "synthesis": {
+    "source": "synthesis",
+    "scope": "32 real-dev questions per configuration; adjudicated task success, preceding Stage 3 strict-polarity contract",
+    "rows": {
+      "baseline/sosana_luna": {
+        "n": 32,
+        "task_success": 27,
+        "critical_errors": 1,
+        "family_macro": 0.8627450980392157
+      },
+      "baseline/qwen": {
+        "n": 32,
+        "task_success": 26,
+        "critical_errors": 1,
+        "family_macro": 0.8333333333333334
+      },
+      "challenger/sosana_luna": {
+        "n": 32,
+        "task_success": 30,
+        "critical_errors": 0,
+        "family_macro": 0.9117647058823529
+      },
+      "challenger/qwen": {
+        "n": 32,
+        "task_success": 24,
+        "critical_errors": 2,
+        "family_macro": 0.7843137254901961
+      }
+    },
+    "selected_profile": "baseline",
+    "selection_rule": "Average across the two generator family-macro scores improves AND critical error count does not increase for either generator; otherwise retain baseline. Exploratory dev-only.",
+    "both_generator_average": {
+      "baseline": 0.8480392156862746,
+      "challenger": 0.8480392156862745
+    }
+  },
+  "agent_confirmation": {
+    "source": "agents",
+    "reader": "Qwen3-4B-Instruct-2507",
+    "scope": "80 authored reserved questions per frozen finalist; not independent blind testing",
+    "rows": {
+      "flow": {
+        "observed": 80,
+        "family_macro": 0.5275974025974026,
+        "technical_status": {
+          "citation_rejected": 1,
+          "model_output_invalid": 2,
+          "success": 77
+        },
+        "strict_success": 44
+      },
+      "static_sosana": {
+        "observed": 80,
+        "family_macro": 0.5313852813852814,
+        "technical_status": {
+          "citation_rejected": 1,
+          "model_output_invalid": 2,
+          "scope_violation": 2,
+          "success": 75
+        },
+        "strict_success": 44
+      }
+    },
+    "paired_family_bootstrap": {
+      "baseline": "reserved/flow_reference/None/qwen/1/reader_replay",
+      "derivatives_clustered_by_family": true,
+      "difference": 0.003787878787878787,
+      "paired_families": 11,
+      "paired_questions": 80,
+      "percentile_95_ci": [
+        -0.03409090909090909,
+        0.04545454545454545
+      ],
+      "replicates": 2000,
+      "seed": 20260927
+    },
+    "dependency_case_limitation": "All eight authored dependency cases admitted sufficient first flow context."
+  },
+  "agent_budget_curve": {
+    "source": "agents",
+    "scope": "Same 16 dev questions; family-macro strict success; budgets are maximum searches, not executed counts",
+    "reader": "Qwen3-4B-Instruct-2507",
+    "controller": "Sosana/Luna",
+    "qwen_controller": "blocked by functional smoke; not a measured zero-quality score",
+    "rows": [
+      {
+        "mode": "reactive",
+        "max_searches": 1,
+        "cases": 16,
+        "family_macro": 0.8333333333333334
+      },
+      {
+        "mode": "reactive",
+        "max_searches": 2,
+        "cases": 16,
+        "family_macro": 0.8333333333333334
+      },
+      {
+        "mode": "reactive",
+        "max_searches": 4,
+        "cases": 16,
+        "family_macro": 0.8333333333333334
+      },
+      {
+        "mode": "reactive",
+        "max_searches": 8,
+        "cases": 16,
+        "family_macro": 0.7666666666666667
+      },
+      {
+        "mode": "research",
+        "max_searches": 1,
+        "cases": 16,
+        "family_macro": 0.8333333333333334
+      },
+      {
+        "mode": "research",
+        "max_searches": 2,
+        "cases": 16,
+        "family_macro": 0.7333333333333333
+      },
+      {
+        "mode": "research",
+        "max_searches": 4,
+        "cases": 16,
+        "family_macro": 0.8333333333333334
+      },
+      {
+        "mode": "research",
+        "max_searches": 8,
+        "cases": 16,
+        "family_macro": 0.8333333333333334
+      },
+      {
+        "mode": "static_batch",
+        "max_searches": 1,
+        "cases": 16,
+        "family_macro": 0.7666666666666667
+      },
+      {
+        "mode": "static_batch",
+        "max_searches": 2,
+        "cases": 16,
+        "family_macro": 0.7666666666666667
+      },
+      {
+        "mode": "static_batch",
+        "max_searches": 4,
+        "cases": 16,
+        "family_macro": 0.8333333333333334
+      },
+      {
+        "mode": "static_batch",
+        "max_searches": 8,
+        "cases": 16,
+        "family_macro": 0.8333333333333334
+      }
+    ]
+  },
+  "reader_prompt": {
+    "sources": [
+      "reader_control",
+      "reader_recovery"
+    ],
+    "scope": "20 authored reader cases; P0 replay and P1 new outputs; same strict projection",
+    "rows": [
+      {
+        "reader": "Qwen4",
+        "P0": 15,
+        "P1": 16
+      },
+      {
+        "reader": "Sosana/Luna",
+        "P0": 14,
+        "P1": 20
+      },
+      {
+        "reader": "Qwen30",
+        "P0": 14,
+        "P1": 18,
+        "P0_basis": "separate recovery estimate; original history remains 8/20 including seven infrastructure failures"
+      }
+    ],
+    "denominator": 20,
+    "luna_authored_control": {
+      "passed": 10,
+      "total": 10
+    }
+  },
+  "async_transport": {
+    "source": "reader_recovery",
+    "model_tasks": 33,
+    "responses_delivered": 33,
+    "transport_errors": 0,
+    "duplicate_task_submissions": 0,
+    "long_responses_over_125s": 3,
+    "maximum_task_s": 157.41,
+    "maximum_http_request_s_upper_bound": 1.73
+  },
+  "answer_fit": {
+    "source": "answer_fit",
+    "attempts": 30,
+    "rubric_matches": 25,
+    "technical_errors": 1,
+    "false_found": 4,
+    "mismatched_answer_opportunities": 9,
+    "valid_positives_retained": 21,
+    "valid_positive_opportunities": 21,
+    "h03": "fits in all three repeats; expected no_answer_to_requested_target",
+    "decision": "DO_NOT_ACTIVATE"
+  },
+  "source_fidelity": {
+    "source": "source_fidelity",
+    "cases_per_reader": 20,
+    "Qwen_pass": 17,
+    "Sosana_Luna_pass": 17,
+    "decision": "NOT_READY_SEMANTIC_GAP"
+  },
+  "stronger_reader_public_evidence": "SOL_READER_COMPARISON.json",
+  "agent_first_wave": {
+    "source": "agent_first_wave",
+    "scope": "Same 12 dev questions per mode/reader; errors retained, some identical generations reused; not the later v2 confirmation",
+    "rows": {
+      "flow/sosana_luna": {
+        "planned": 12,
+        "strict_success": 10,
+        "status": {
+          "success": 12
+        }
+      },
+      "flow/qwen": {
+        "planned": 12,
+        "strict_success": 11,
+        "status": {
+          "success": 12
+        }
+      },
+      "flow_wide/sosana_luna": {
+        "planned": 12,
+        "strict_success": 9,
+        "status": {
+          "success": 12
+        }
+      },
+      "flow_wide/qwen": {
+        "planned": 12,
+        "strict_success": 10,
+        "status": {
+          "success": 12
+        }
+      },
+      "static_batch/sosana_luna": {
+        "planned": 12,
+        "strict_success": 8,
+        "status": {
+          "success": 12
+        }
+      },
+      "static_batch/qwen": {
+        "planned": 12,
+        "strict_success": 8,
+        "status": {
+          "success": 12
+        }
+      },
+      "tool_once/sosana_luna": {
+        "planned": 12,
+        "strict_success": 10,
+        "status": {
+          "success": 12
+        }
+      },
+      "tool_once/qwen": {
+        "planned": 12,
+        "strict_success": 10,
+        "status": {
+          "failed": 1,
+          "success": 11
+        }
+      }
+    }
+  }
+}
