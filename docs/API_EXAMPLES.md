@@ -144,6 +144,55 @@
 
 </details>
 
+## Обычная перефразировка — ответ
+
+Идентификатор проверки: `faithful_paraphrase`. [Исходный TXT](../examples/acceptance/source_fidelity_v2/faithful_paraphrase.txt).
+
+**Вопрос:** За какой срок осматривают оборудование после получения обращения?
+
+**Ответ:**
+
+> Оборудование осматривают в течение 6 рабочих дней с момента получения обращения.
+
+`status=complete` · `found=true`
+
+Иная формулировка не меняет действие и начало срока, поэтому отказывать не требуется.
+
+**Цитата источника:**
+
+> Срок осмотра оборудования — 6 рабочих дней с момента получения обращения.
+
+Логическая страница **1**, диапазон символов **[0, 74)**.
+
+<details>
+<summary>Посмотреть сохранённый JSON ответа</summary>
+
+```json
+{
+  "answer": "Оборудование осматривают в течение 6 рабочих дней с момента получения обращения.",
+  "citations": [
+    {
+      "boxes": [],
+      "char_end": 74,
+      "char_start": 0,
+      "document_id": "964d724588a8d57356ac094c0e2c23d2abf2a5c9188c531acbba294274ec6417",
+      "match_policy": "issued_span",
+      "page": 1,
+      "source_format": "txt",
+      "source_id": "a358e26e0984458299fda001951a055e64fd14bc855541e69dd0173b672beeb3",
+      "source_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821",
+      "text": "Срок осмотра оборудования — 6 рабочих дней с момента получения обращения.\n",
+      "text_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821"
+    }
+  ],
+  "found": true,
+  "status": "complete",
+  "support_check": "citation_authenticity_only"
+}
+```
+
+</details>
+
 ## Простой расчёт по тарифу
 
 Идентификатор проверки: `H05`. [Исходный TXT](../examples/acceptance/alpha.txt).
@@ -299,55 +348,6 @@
   "found": false,
   "status": "not_found",
   "support_check": "abstained"
-}
-```
-
-</details>
-
-## Обычная перефразировка — ответ
-
-Идентификатор проверки: `faithful_paraphrase`. [Исходный TXT](../examples/acceptance/source_fidelity_v2/faithful_paraphrase.txt).
-
-**Вопрос:** За какой срок осматривают оборудование после получения обращения?
-
-**Ответ:**
-
-> Оборудование осматривают в течение 6 рабочих дней с момента получения обращения.
-
-`status=complete` · `found=true`
-
-Иная формулировка не меняет действие и начало срока, поэтому отказывать не требуется.
-
-**Цитата источника:**
-
-> Срок осмотра оборудования — 6 рабочих дней с момента получения обращения.
-
-Логическая страница **1**, диапазон символов **[0, 74)**.
-
-<details>
-<summary>Посмотреть сохранённый JSON ответа</summary>
-
-```json
-{
-  "answer": "Оборудование осматривают в течение 6 рабочих дней с момента получения обращения.",
-  "citations": [
-    {
-      "boxes": [],
-      "char_end": 74,
-      "char_start": 0,
-      "document_id": "964d724588a8d57356ac094c0e2c23d2abf2a5c9188c531acbba294274ec6417",
-      "match_policy": "issued_span",
-      "page": 1,
-      "source_format": "txt",
-      "source_id": "a358e26e0984458299fda001951a055e64fd14bc855541e69dd0173b672beeb3",
-      "source_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821",
-      "text": "Срок осмотра оборудования — 6 рабочих дней с момента получения обращения.\n",
-      "text_sha256": "e5f2dee57032907e00aea2f5409aa0db4995ec3f96c76eb338e2218da1552821"
-    }
-  ],
-  "found": true,
-  "status": "complete",
-  "support_check": "citation_authenticity_only"
 }
 ```
 
